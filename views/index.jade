@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href='/new') Send your message
+  each message in messages
+    section.message-card 
+        h2= message.user
+        p.description= message.text
+        footer 
+          p.date= message.added

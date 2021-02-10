@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+  header 
+    h1= 'Message Board'
+    p= 'Write a message'
+  main
+    section.form-container 
+      form(method='POST' action='/new')
+        input(type='text', placeholder='username' name='user' id='user')
+        br
+        br
+        textarea(name='text' placeholder='Gangadhar is Shaktiman or any relavant info' cols='30' )
+        br
+        br
+        button(type='submit' id='submit-btn')= 'post'
